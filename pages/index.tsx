@@ -31,35 +31,9 @@ const COLLECTION_SET_ID = process.env.NEXT_PUBLIC_COLLECTION_SET_ID
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-const metadata = {
-  title: (title: string) => <title>{title}</title>,
-  description: (description: string) => (
-    <meta name="description" content={description} />
-  ),
-  tagline: (tagline: string | undefined) => (
-    <>{tagline || 'Odyssey DAA'}</>
-  ),
-  image: (image?: string) => {
-    if (image) {
-      return (
-        <>
-          <meta name="twitter:image" content={image} />
-          <meta name="og:image" content={image} />
-        </>
-      )
-    }
-    return null
-  },
-}
-
 const Home: NextPage<Props> = ({ fallback }) => {
   const isSmallDevice = useMediaQuery('only screen and (max-width : 600px)')
   const router = useRouter()
-
-  const title = META_TITLE && metadata.title(META_TITLE)
-  const description = META_DESCRIPTION && metadata.description(META_DESCRIPTION)
-  const image = metadata.image(META_IMAGE)
-  const tagline = metadata.tagline(TAGLINE)
 
   useEffect(() => {
     if (REDIRECT_HOMEPAGE && COLLECTION) {
@@ -78,18 +52,10 @@ const Home: NextPage<Props> = ({ fallback }) => {
 
   return (
     <Layout navbar={{}}>
-      <Head>
-        {title}
-        {description}
-        {image}
-      </Head>
-      <header className="col-span-full mb-12 mt-[66px] px-4 md:mt-40 lg:px-0">
-        <h1 className="reservoir-h1 text-center dark:text-white">{tagline}</h1>
-      </header>
       <div className="col-span-full px-6 md:px-16">
         <div className="mb-9 flex w-full items-center justify-between">
           <div className="reservoir-h4 dark:text-white">
-            Curated Collections Ranked by Daily Volume
+            Ranked by Daily Volume
           </div>
           {!isSmallDevice && <SortTrendingCollections />}
         </div>
