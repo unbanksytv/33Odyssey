@@ -68,7 +68,7 @@ const Home: NextPage<Props> = ({ fallback }) => {
        <br/>
       
        <div className="min-h-screen bg-center bg-cover bg-no-repeat">
-        <img src="mint_party.jpg" className="absolute top-0 left-0 w-full h-full object-cover blur-image-on-load" alt="Background"/>
+        <img src="cover.jpeg" className="absolute top-0 left-0 w-full h-full object-cover blur-image-on-load" alt="Background"/>
       </div>
 
       <div className="col-span-full px-6 md:px-16">
