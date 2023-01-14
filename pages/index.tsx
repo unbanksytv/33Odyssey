@@ -9,6 +9,15 @@ import Footer from 'components/Footer'
 import { useMediaQuery } from '@react-hookz/web'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+
+const OptimizedImage = () => {
+  return (
+      <p>
+          <Image src="/mint_party.jpg" alt="lfg" layout="fill"></Image>
+      </p>
+  )
+}
 
 // Environment variables
 // For more information about these variables
@@ -52,6 +61,16 @@ const Home: NextPage<Props> = ({ fallback }) => {
 
   return (
     <Layout navbar={{}}>
+      <Head>
+      </Head>
+      <header>
+      </header>
+       <br/>
+      
+       <div className="min-h-screen bg-center bg-cover bg-no-repeat">
+        <img src="mint_party.jpg" className="absolute top-0 left-0 w-full h-full object-cover blur-image-on-load" alt="Background"/>
+      </div>
+
       <div className="col-span-full px-6 md:px-16">
         <div className="mb-9 flex w-full items-center justify-between">
           <div className="reservoir-h4 dark:text-white">
