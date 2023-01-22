@@ -1,6 +1,6 @@
 <h3 align="center">Reservoir Market</h3>
   <p align="center">
-An open source NFT marketplace built on Reservoir.
+An open source NFT marketplace built on Reservoir. Reservoir is primarily an API platform. Yes, this repo is our MVP NFT marketplace, but think of it more like a reference marketplace. Designed to show what's possible, and to be forked to build your own.
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
