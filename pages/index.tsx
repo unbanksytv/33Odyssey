@@ -14,7 +14,7 @@ import Image from 'next/image'
 const OptimizedImage = () => {
   return (
       <p>
-          <Image src="/cover.jpeg" alt="lfg" layout="fill"></Image>
+          <Image src="/cover.jpeg" alt="lfg"></Image>
       </p>
   )
 }
